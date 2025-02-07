@@ -1,7 +1,8 @@
 const Apikey = "731b819792fa41e385dd5eca847d8d72";
 const blogcontainer = document.getElementById("blog-container");
 const searchfield = document.getElementById('search-input');
-const searchbtn = document.getElementById("search-btn");
+const searchIcon = document.getElementById('search-icon');
+
 
 async function fetchrandomnews() {
     try {
@@ -15,7 +16,8 @@ async function fetchrandomnews() {
     }
 }
 
-searchbtn.addEventListener('click', async () => {
+searchIcon.addEventListener('click', async () => {
+
     const query = searchfield.value.trim();
     if (query !== "") {
         try {
